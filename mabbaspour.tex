@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com), based on the
+% CV created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 package.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Matin Abbaspour}
+\tagline{Android Developer}
+
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{matinabbaspour@gmail.com}
+  \phone{+98 915 738 9279}
+  % \homepage{mabbaspour.ir}
+  \linkedin{matinabbaspour}
+
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+
+\cvsection{Profile}
+ {\normalsize\color{emphasis} Android Developer with 3+ years of experience designing, developing, testing, and maintaining Android applications in transportation, telemedicine, and e-shops projects.
+ \par}
+ \medskip
+ 
+\cvsection{Experience}
+\cvevent{Software Engineer}{\href{http://mobintabaran.ir}{Mobin Tabaran Intelligent Structures}}{Jul 2019 -- Jun 2022}{Mashhad, IRAN}
+
+\divider
+
+\cvproject {Bayan Player}
+\begin{itemize}
+\item Creating android streaming application (like Spotify and CastBox) that play synchronized audio files with text and images.
+\item Developing a background service for playback.
+\item Implementation of encryption for downloaded files.
+\item Technologies Used - ExoPlayer, OrmLight, Android Services (Foreground
+And Background), Broadcast Receiver, Lyric View
+\end{itemize}
+
+\divider
+
+\cvproject{Car Management System}
+\begin{itemize}
+\item Get the driver's exact position and save the route traveled by the driver offline, and send it to the server when it becomes online.
+\item Optimizing memory usage and improving performance by sending location data stored in DB as separate segments and processes.
+\item Improving crash-free users up to 98\%.
+\item Technologies Used - Android Location Manager, Map, SQLite, Google Fire-
+base, Google Analytics, Alarm Manager
+% \item Display suggested routes for one or more destinations.
+% \item Routing and predicting the time of the mission.
+\end{itemize}
+
+\divider
+
+\cvproject{\href{https://sspm.krec.ir/}{Maintenance System Of High Pressure Substations (HPS)}}
+\begin{itemize}
+\item Designing the UI and developing the application for Android tablets.
+\item Technologies Used - Java, SQLite, Google ML Kit, Barcode Scanner, Download, And Upload Center
+\end{itemize}
+
+
+\cvsection{PROJECTS}
+
+\cvevent{Android Developer And UI Designer}{\href{https://play.google.com/store/apps/details?id=ir.mumapp.patient}{MumApp}}{2022}{}
+\begin{itemize}
+\item Creating telemedicine application for receiving appointments and online visits for support and advice for mothers and daughters.
+\item Including various questionnaires to measure mental and physical condition to help the doctor for diagnosis and treatment.
+\item Blog content to improve knowledge and obtain updated information.
+\item Online visit with the possibility of chatting and uploading photos and medical documents.
+\item Technologies Used - Data Binding, View Binding, ViewModel, Material Design.
+\end{itemize}
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+\cvsection{Personal Info}
+\begin{itemize}
+\item {Born In \textbf{August 24, 1999}}
+\item {Live in
+\href{https://www.google.com/maps/place/Mashhad,+Razavi+Khorasan+Province,+Iran/@36.2976014,59.5092469,12z/data=!3m1!4b1!4m5!3m4!1s0x3f6c911abe4131d7:0xc9c57e3a9318753b!8m2!3d36.2619922!4d59.6173096}
+{\textbf{Mashhad}}}
+\item {Marital Status: \textbf{Single} }
+\item {Military Service: \textbf{Exempted from service}}
+\end{itemize}
+
+
+\cvsection{Education}
+\cvevent{B.A Computer Software Engineering}{\href{http://mshdiau.ac.ir}{Islamic Azad University of Mashhad}}{ Sep 2017 -- Feb 2021}{}
+\begin{itemize}
+\item Passed 152 units with an average grade of 17.68 from 20.
+\end{itemize}
+
+\cvsection{Awards}
+\cvevent{9Th Place (Honorary diploma)}{\href{https://skills.irantvto.ir/news/19result08/}{Mobile Applications Development}}{December 2021}{Iran - WorldSkills}
+\begin{itemize}
+\item Competition period is 3 consecutive days in the template of Hackaton with 18 participants.
+\end{itemize}
+
+\divider
+
+\cvevent{Qualified Team}{\href{https://bit.ly/3Rsd13e}{Mobile Programming Marathon}}{November 2021}{Sharif University}
+\begin{itemize}
+\item Being among the top 10 teams in a competition of 58 teams.
+\end{itemize}
+
+
+\cvsection{SKILLS}
+\begin{itemize}
+\item Retrofit And OkHttp,  Restful API, ExoPlayer, Socket, OrmLight, Material Design.
+\smallskip
+\item Kotlin, Data Binding, View Binding, ViewModel, Live Data, Navigation component. Android Chart, Foreground Services, Background Services, Android Location Manager.
+\smallskip
+\item Firebase, Google Map, Google Analytics, Google ML Kit, Google Authentication, Google 
+ARCore.
+\smallskip
+\item  Java Spring Boot, Thymeleaf, PostgreSQL.
+\smallskip
+\item .NET, SQL Server, LINQ, Razor.
+\smallskip
+\item  JavaScript, jQuery, Bootstrap.
+\end{itemize}
+
+
+
+\end{paracol}
+
+\end{document}
